@@ -7,8 +7,8 @@ export default class Products extends Component {
         // Viene de un "fetch".....
         let data = [{name:"botella", price:"10"},
                     {name:"cosa", price:"3"},
-                    {name:"Silla", price:"20"},
-                    {name:"queso", price:"4"}]
+                    {name:"Silla", price:"20", brand:"Ikea"},
+                    {name:"queso", price:"4", brand:"Garcia Vaquero"}]
 
         return (
             <article>
