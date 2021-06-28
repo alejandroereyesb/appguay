@@ -10,7 +10,6 @@ export default class Product extends Component {
         }
     }
     
-    
     render() {
 
         let {name,price,brand} = this.props.details //Destructuring
