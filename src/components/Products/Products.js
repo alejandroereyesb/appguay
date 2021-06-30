@@ -39,7 +39,6 @@ export default class Products extends Component {
 
     removeProduct = (i) => {
         let filteredArray = this.state.products.filter((item, pos) => i !== pos);
-
         this.setState({products: filteredArray});
     }
 
