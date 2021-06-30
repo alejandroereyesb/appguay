@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
+import axios from 'axios';
+
 import './Staff.css';
 import PokemonsApi from '../PokemonsApi'
+
 
 class Staff extends Component {
   constructor(props) {
@@ -11,12 +14,17 @@ class Staff extends Component {
   }
 
   async componentDidMount() {
-    const resp = await fetch('https://pokeapi.co/api/v2/pokemon');
-    const data = await resp.json();
-    this.setState({
-      pokeLista: data.results
-    })
-    console.log('componentDidMount');
+    // Simular un retardo del fetch
+    setTimeout(async () => { 
+      
+      const res = await axios.get('https://pokeapi.co/api/v2/pokemon');
+
+      this.setState({
+        pokeLista: res.data.results
+      })
+      console.log('componentDidMount');
+
+    }, 2000);
   }
 
   render() {
