@@ -5,3 +5,22 @@
 .Nav {
     /* propertys here */
 }
+
+ .main-nav ul {
+	margin: 1em 0 .5em;
+	text-align: center;
+}
+.main-nav li {
+	display: inline;
+}
+
+.main-nav a {
+    display: inline-block;
+	padding: .5em 1.5em;
+    font-size: 0.75em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #343534;
+    text-decoration: none;
+}

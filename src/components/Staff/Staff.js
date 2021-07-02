@@ -30,7 +30,10 @@ class Staff extends Component {
   render() {
     console.log('RENDER')
     return (
-      <PokemonsApi lista={this.state.pokeLista}></PokemonsApi>
+        <>
+          <h2>Staff</h2>
+          <PokemonsApi lista={this.state.pokeLista}></PokemonsApi>
+        </>
     );
   }
 }

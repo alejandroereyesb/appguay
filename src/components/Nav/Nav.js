@@ -19,13 +19,16 @@ class Nav extends Component {
 
   render() {
     return (
-      <nav>
+      <nav className="main-nav">
         <ul>
           <li>
             <Link to="/">Home</Link>
           </li>
           <li>
             <Link to="/staff">Quienes somos</Link>
+          </li>
+          <li>
+            <Link to="/pokelist">Pokelist</Link>
           </li>
           <li>
             <Link to="/contact">Contacto</Link>

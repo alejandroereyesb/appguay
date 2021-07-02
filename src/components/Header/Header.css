@@ -5,3 +5,36 @@
 .Header {
     /* propertys here */
 }
+
+ img.logo {
+    height:60px;
+}
+
+.container {
+	width: 960px;
+	max-width: 100%;
+	padding: 20px;
+	margin: 0 auto;
+}
+
+.main-header .container {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.main-header {
+    background: rgb(241, 191, 191);
+    box-shadow: 0 1px 6px rgba(0,0,0,.1);
+}
+.mh-logo {
+    margin: 0 0 -10px;
+}
+
+
+ @media (min-width: 960px) {
+	.main-header .container {
+		justify-content: space-between;
+	}
+}

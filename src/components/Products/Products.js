@@ -59,12 +59,12 @@ export default class Products extends Component {
                     <label>URL Imagen:</label><br/>
                     <input type="url" id="url" name="url"/><br/>
 
-                    <input type="submit" value="Enviar"/>
+                    <input className="button" type="submit" value="Enviar"/>
                 </form>
                 <h2>Lista de productos</h2>
                 {this.renderProducts()}
 
-                <button onClick={this.removeAllProducts}>Borrar todo</button>
+                <button className="button" onClick={this.removeAllProducts}>Borrar todo</button>
                 <p>Último añadido: {this.state.name}</p> 
             </article>
         )

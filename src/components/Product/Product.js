@@ -25,7 +25,7 @@ export default class Product extends Component {
                     <p>Marca: { brand || this.state.brand }</p>
                     <img src={url || this.state.url} class="img" alt="" />
                 </div>
-                <button onClick={this.props.remove}>Borrar</button>
+                <button className="button" onClick={this.props.remove}>Borrar</button>
             </section>
         )
     }
