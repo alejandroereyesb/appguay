@@ -4,6 +4,9 @@ import Products from '../Products'
 import Staff from '../Staff'
 import Contact from '../Contact'
 import PokeList from '../PokeList'
+import HooksUseState from '../HooksUseState';
+import HooksUseEffect from '../HooksUseEffect';
+import Topic from '../Topic';
 
 export default class Main extends Component {
     render() {
@@ -13,6 +16,9 @@ export default class Main extends Component {
                     <Route exact path="/" component={Products}/>
                     <Route path="/staff" component={Staff} />
                     <Route path="/pokelist" component={PokeList} />
+                    <Route path="/usestate" component={HooksUseState} />
+                    <Route path="/useeffect" component={HooksUseEffect} />
+                    <Route path="/topic" component={Topic} />
                     <Route path="/contact" component={Contact} />
                 </Switch>
             </main>

@@ -31,6 +31,15 @@ class Nav extends Component {
             <Link to="/pokelist">Pokelist</Link>
           </li>
           <li>
+            <Link to="/usestate">useState</Link>
+          </li>
+          <li>
+            <Link to="/useeffect">useEffect</Link>
+          </li>
+          <li>
+            <Link to="/topic">Topic</Link>
+          </li>
+          <li>
             <Link to="/contact">Contacto</Link>
           </li>
         </ul>
