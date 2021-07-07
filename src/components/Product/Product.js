@@ -1,32 +1,28 @@
-import React, { Component } from 'react'
+import React, { useContext, useState } from 'react'
+import {ColorContext} from '../../context/ColorContext';
 import './Product.css'
 
-export default class Product extends Component {
+function Product(props) {
+    const ctx = useContext(ColorContext); // Context
+    const [data, setdata] = useState({
+        brand:"Fictizia S.A",
+        url:"https://ep01.epimg.net/elcomidista/imagenes/2017/07/05/articulo/1499278653_525806_1499279334_noticia_normal.jpg"
+   }) // estado
 
-    constructor(props) {
-        super(props)
-    
-        this.state = {
-             brand:"Fictizia S.A",
-             url:"https://ep01.epimg.net/elcomidista/imagenes/2017/07/05/articulo/1499278653_525806_1499279334_noticia_normal.jpg"
-        }
-    }
-    
-    render() {
-
-        let {name,price,brand,url} = this.props.details //Destructuring
-
-        return (
-            <section>
-                <div>
-                    <h3>OFERTA</h3>
-                    <p>Producto:{name}</p>
-                    <p>Precio: {price} €</p>
-                    <p>Marca: { brand || this.state.brand }</p>
-                    <img src={url || this.state.url} class="img" alt="" />
-                </div>
-                <button className="button" onClick={this.props.remove}>Borrar</button>
-            </section>
-        )
-    }
+    let {name,price,brand,url} = props.details //Destructuring
+    return (
+        <section>
+        <div>
+            <h3>OFERTA</h3>
+            <p>Producto:{name}</p>
+            <p>Precio: {price} €</p>
+            <p>Marca: { brand || data.brand }</p>
+            <img src={url || data.url} class="img" alt="" />
+        </div>
+        <button className="button" onClick={props.remove} style={{ backgroundColor: ctx.colors.yellow }}>Borrar</button>
+    </section>
+    )
 }
+
+export default Product
+

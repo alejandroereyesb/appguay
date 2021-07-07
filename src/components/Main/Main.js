@@ -7,6 +7,7 @@ import PokeList from '../PokeList'
 import HooksUseState from '../HooksUseState';
 import HooksUseEffect from '../HooksUseEffect';
 import Topic from '../Topic';
+import Login from '../Login';
 
 export default class Main extends Component {
     render() {
@@ -20,6 +21,7 @@ export default class Main extends Component {
                     <Route path="/useeffect" component={HooksUseEffect} />
                     <Route path="/topic" component={Topic} />
                     <Route path="/contact" component={Contact} />
+                    <Route path="/login" component={Login} />
                 </Switch>
             </main>
         )
