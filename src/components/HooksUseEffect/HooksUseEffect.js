@@ -1,10 +1,15 @@
-import React, { useEffect, useState } from 'react';
+// import React, { useEffect, useState } from 'react';
+import React from 'react';
+import useFetch from '../../hooks/useFetch'
 
 const HooksUseEffect = () => {
   
-    const [pokemons, setPokemons] = useState([]); // El estado es un [].  --> [{},{},{}]
+    // Antes de usar Hool personalizado useFetch()
+    // ...
+    //const [pokemons, setPokemons] = useState([]); // El estado es un [].  --> [{},{},{}]
 
     // Sustituye a componentDidMount 
+    /*
     useEffect(() => {
         const getPokemons = async () =>{
             const resp = await fetch('https://pokeapi.co/api/v2/pokemon');
@@ -13,6 +18,9 @@ const HooksUseEffect = () => {
         }
         getPokemons();
     },[]);
+    */
+
+    const pokemons = useFetch('https://pokeapi.co/api/v2/pokemon');
 
     return (
         <>

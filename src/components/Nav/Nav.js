@@ -1,24 +1,12 @@
-import React, { Component } from 'react';
+import React, {useContext} from 'react';
 import {Link} from 'react-router-dom';
+import {UserContext} from '../../context/UserContext';
 import './Nav.css';
 
-class Nav extends Component {
-  // constructor(props){
-    // super(props);
-    // this.state = {};
-  // }
+function Nav() {
+  const userCtx = useContext(UserContext);
 
-  // componentWillMount(){}
-  // componentDidMount(){}
-  // componentWillUnmount(){}
-
-  // componentWillReceiveProps(){}
-  // shouldComponentUpdate(){}
-  // componentWillUpdate(){}
-  // componentDidUpdate(){}
-
-  render() {
-    return (
+  return (
       <nav className="main-nav">
         <ul>
           <li>
@@ -45,10 +33,16 @@ class Nav extends Component {
           <li>
             <Link to="/login">Login</Link>
           </li>
+          {userCtx.name?<li>
+            <span>Hola {userCtx.name}</span> 
+            <button className="button" onClick={userCtx.logout}>Logout</button>
+            </li>
+            :""}
         </ul>
       </nav>
-    );
-  }
+
+      
+  )
 }
 
-export default Nav;
+export default Nav

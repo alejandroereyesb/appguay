@@ -1,17 +1,24 @@
 import React, {useContext}  from "react";
-import {ColorContext} from '../../context/ColorContext';
+import {UserContext} from '../../context/UserContext';
 
 const Login = () => {
-  const ctx = useContext(ColorContext);
-  console.log(ctx.user.login);
-  console.log(ctx.user.name)
+  const ctx = useContext(UserContext);
+  console.log(ctx.login);
+  console.log(ctx.name)
+
+
+  function handleSubmit(event){
+    event.preventDefault();
+    console.log(event.target.elements.nombre.value);
+    ctx.login(event.target.elements.nombre.value); // Actualiza el Contexto
+  }
+
   return <div>
-    <button onClick={()=>{
-        ctx.user.login("Alex")
-        alert(ctx.user.name+" Se ha logado")
-      }
-    }>Login</button>
-  </div>;
+          <form onSubmit={handleSubmit}>
+            <input type="text" name="nombre" />
+            <input className="button" type="submit" value="Login" />
+          </form>
+        </div>;
 };
 
 export default Login;

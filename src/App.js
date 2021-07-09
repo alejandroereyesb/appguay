@@ -5,14 +5,13 @@ import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 import { ColorContext } from "./context/ColorContext";
-//import { UserContext } from "./context/UserContext";
+import { UserContext } from "./context/UserContext";
 
 function App() {
   // Colores
   const [colors, setColors] = useState({
-    blue: "#03619c",
-    yellow: "#8c8f03",
-    red: "#9c0312"
+    color:"pink",
+    "changeColor":changeColor
   }); // estado de colores
   // Usuario
   const [user, setUser] = useState({
@@ -23,19 +22,25 @@ function App() {
   // user --> {name:"alex",logout:logout()}
 
   function login(name){
-    setUser({...user,name});
+    setUser({...user,name}); // Cambia nombre de usuario
   }
 
   function logout(){
-    setUser({...user,"name":""});
+    setUser({...user,"name":""}); // Borra nombre de usuario
   }
+  function changeColor(newColor){
+    setColors({...colors,color:newColor});
+  }
+
 
   return (
     <div className="App">
       <BrowserRouter>
-      <ColorContext.Provider value={{colors,user}}>
-        <Header/>
-        <Main/>
+      <ColorContext.Provider value={colors}>
+        <UserContext.Provider value={user}>
+          <Header/>
+          <Main/>
+        </UserContext.Provider>
       </ColorContext.Provider>
       </BrowserRouter>
 

@@ -19,7 +19,7 @@ function Product(props) {
             <p>Marca: { brand || data.brand }</p>
             <img src={url || data.url} class="img" alt="" />
         </div>
-        <button className="button" onClick={props.remove} style={{ backgroundColor: ctx.colors.yellow }}>Borrar</button>
+        <button className="button" onClick={props.remove} style={{ backgroundColor: ctx.color }}>Borrar</button>
     </section>
     )
 }

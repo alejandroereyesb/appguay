@@ -24,3 +24,10 @@
     color: #343534;
     text-decoration: none;
 }
+
+.main-nav span {
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+}
