@@ -8,6 +8,7 @@ import HooksUseState from '../HooksUseState';
 import HooksUseEffect from '../HooksUseEffect';
 import Topic from '../Topic';
 import Login from '../Login';
+import PruebaRedux from '../PruebaRedux';
 
 export default class Main extends Component {
     render() {
@@ -22,6 +23,7 @@ export default class Main extends Component {
                     <Route path="/topic" component={Topic} />
                     <Route path="/contact" component={Contact} />
                     <Route path="/login" component={Login} />
+                    <Route path="/redux" component={PruebaRedux} />
                 </Switch>
             </main>
         )

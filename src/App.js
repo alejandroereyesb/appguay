@@ -1,5 +1,7 @@
 import {BrowserRouter} from 'react-router-dom';
 import React, { useState } from 'react';
+import {Provider} from 'react-redux'
+import store from './redux/store'
 import './App.css';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
@@ -34,18 +36,19 @@ function App() {
 
 
   return (
-    <div className="App">
-      <BrowserRouter>
-      <ColorContext.Provider value={colors}>
-        <UserContext.Provider value={user}>
-          <Header/>
-          <Main/>
-        </UserContext.Provider>
-      </ColorContext.Provider>
-      </BrowserRouter>
-
-      <Footer/>
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <BrowserRouter>
+        <ColorContext.Provider value={colors}>
+          <UserContext.Provider value={user}>
+            <Header/>
+            <Main/>
+          </UserContext.Provider>
+        </ColorContext.Provider>
+        </BrowserRouter>
+        <Footer/>
+      </div>
+    </Provider>
   );
 }
 
