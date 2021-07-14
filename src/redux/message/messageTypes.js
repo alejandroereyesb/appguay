@@ -1,0 +1,1 @@
+export const WRITE_MESSAGE = 'WRITE_MESSAGE'
