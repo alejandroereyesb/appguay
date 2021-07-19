@@ -2,6 +2,7 @@ import React from 'react'
 import CounterContainer from '../CounterContainer'
 import HooksCounterContainer from '../HooksCounterCointainer'
 import MessageContainer from '../MessageContainer'
+import UserContainer from '../UserContainer'
 
 function PruebaRedux() {
     return (
@@ -9,7 +10,7 @@ function PruebaRedux() {
             <CounterContainer/>
             <HooksCounterContainer/>
             <MessageContainer/>
-
+            <UserContainer/>
         </div>
     )
 }
