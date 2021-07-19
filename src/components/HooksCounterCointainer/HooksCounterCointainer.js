@@ -4,7 +4,7 @@ import { increment,decrement,reset } from '../../redux'
 
 function HooksCounterContainer() {
 
-    const counter = useSelector(state => state.counterReducer.counter);
+    const counter = useSelector(state => state.counterR.counter);
     const dispatch = useDispatch();
     return (
         <>

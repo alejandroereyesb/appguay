@@ -16,8 +16,8 @@ function CounterContainer({counter,incrementOne,decrementOne,reset}) {
 
 const mapStateToProps = state => {
     // en este caso, el componente recibirá counter como prop
-    console.log(state.counterReducer.counter)
-    return {counter:state.counterReducer.counter}
+    console.log(state.counterR.counter)
+    return {counter:state.counterR.counter}
 }
 
 const mapDispatchToProps = dispatch => {
