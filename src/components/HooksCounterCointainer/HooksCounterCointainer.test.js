@@ -1,10 +1,16 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render, screen } from '@testing-library/react'
+import {Provider} from 'react-redux'
+import store from '../../redux/store'
 import HooksCounterCointainer from "./HooksCounterCointainer";
+
+const Wrapper = ({ children }) => (
+	<Provider store={store}>{children}</Provider>
+);
 
 describe("HooksCounterCointainer", () => {
   test("matches snapshot", () => {
-    const wrapper = shallow(<HooksCounterCointainer />);
-    expect(wrapper).toMatchSnapshot();
+    render(<HooksCounterCointainer />, { wrapper: Wrapper });
+    expect(screen).toMatchSnapshot();
   });
 });

@@ -1,10 +1,10 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render, screen } from '@testing-library/react'
 import HooksUseEffect from "./HooksUseEffect";
 
 describe("HooksUseEffect", () => {
   test("matches snapshot", () => {
-    const wrapper = shallow(<HooksUseEffect />);
-    expect(wrapper).toMatchSnapshot();
+    render(<HooksUseEffect />);
+    expect(screen).toMatchSnapshot();
   });
 });

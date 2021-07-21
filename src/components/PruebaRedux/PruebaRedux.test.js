@@ -1,10 +1,16 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render, screen } from '@testing-library/react'
+import {Provider} from 'react-redux'
+import store from '../../redux/store'
 import PruebaRedux from "./PruebaRedux";
+
+const Wrapper = ({ children }) => (
+	<Provider store={store}>{children}</Provider>
+);
 
 describe("PruebaRedux", () => {
   test("matches snapshot", () => {
-    const wrapper = shallow(<PruebaRedux />);
-    expect(wrapper).toMatchSnapshot();
+    render(<PruebaRedux />, { wrapper: Wrapper });
+    expect(screen).toMatchSnapshot();
   });
 });

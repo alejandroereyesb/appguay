@@ -14,10 +14,9 @@ function Product(props) {
         <section>
         <div>
             <h3>OFERTA</h3>
-            <p>Producto:{name}</p>
             <p>Precio: {price} €</p>
             <p>Marca: { brand || data.brand }</p>
-            <img src={url || data.url} class="img" alt="" />
+            <img src={url || data.url} className="img" alt="" />
         </div>
         <button className="button" onClick={props.remove} style={{ backgroundColor: ctx.color }}>Borrar</button>
     </section>
