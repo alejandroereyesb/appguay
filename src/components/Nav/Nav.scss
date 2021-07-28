@@ -1,3 +1,5 @@
+@import '../../Sass/colors'; 
+
 /*
  * Nav css File
 */
@@ -21,7 +23,7 @@
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: #343534;
+    color: $ok-color;
     text-decoration: none;
 }
 

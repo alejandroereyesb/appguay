@@ -10,6 +10,7 @@ import Topic from '../Topic';
 import Login from '../Login';
 import PruebaRedux from '../PruebaRedux';
 import PruebaTest from '../PruebaTest';
+import './Main.scss';
 
 export default class Main extends Component {
     render() {

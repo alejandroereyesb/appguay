@@ -1,0 +1,15 @@
+%header-shared {
+    border: 1px solid #ccc;
+    padding: 10px;
+    color: rgb(41, 68, 219);
+  }
+
+.cabecera {
+@extend %header-shared;
+}
+
+.cabecera2 {
+    @extend %header-shared;
+    color:red;
+}
+  

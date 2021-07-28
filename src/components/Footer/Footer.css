@@ -2,6 +2,8 @@
  * Footer css File
 */
 
-.Footer {
-    /* propertys here */
+.Footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
 }

@@ -45,7 +45,7 @@ export default class Products extends Component {
     render() {  
         return (
             <article>
-                <h2>Añade producto</h2>
+                <h2 className="cabecera2">Añade producto</h2>
                 <form onSubmit={this.addProduct}>
                     <label>Name:</label><br/>
                     <input type="text" id="name" name="name"/><br/>
@@ -61,7 +61,7 @@ export default class Products extends Component {
 
                     <input className="button" type="submit" value="Enviar"/>
                 </form>
-                <h2>Lista de productos</h2>
+                <h2 className="cabecera">Lista de productos</h2>
                 {this.renderProducts()}
 
                 <button className="button" onClick={this.removeAllProducts}>Borrar todo</button>

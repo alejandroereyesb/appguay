@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import {Link} from 'react-router-dom';
 import {UserContext} from '../../context/UserContext';
-import './Nav.css';
+import './Nav.scss';
 
 function Nav() {
   const userCtx = useContext(UserContext);
